@@ -35,7 +35,7 @@ public class MemberController {
         return ResponseEntity.status(HttpStatus.OK).body(memberService.update(memberId, request));
     }
 
-    @DeleteMapping("member/{memberId}")
+    @DeleteMapping("/member/{memberId}")
     public ResponseEntity<Void> delete(@PathVariable Long memberId) {
         memberService.delete(memberId);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
